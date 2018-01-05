@@ -5,7 +5,8 @@
 * @docs        :: http://sailsjs.org/#!documentation/models
 */
 var q = require('q');
-var uuid = require('node-uuid');
+/* var uuid = require('node-uuid'); */
+var uuid = require('uuid');
 
 module.exports = {
 
