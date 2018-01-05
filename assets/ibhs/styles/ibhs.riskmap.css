@@ -1,0 +1,12 @@
+.ibhs-riskmap-risk {
+  display: inline-block;
+  padding: 20px 30px;
+}
+
+.ibhs-riskmap-risk.risk-active {
+  background: orange;
+}
+
+.ibhs-riskmap-busy.risk-active {
+  background: pink;
+}

@@ -1,0 +1,81 @@
+<div id="{{id}}_fbBrowser" class="fBrowser">
+
+    {{#if showMenu}}
+      <div class="fBrowserMenu">
+        <div id="{{id}}_menu" class="fbMenu menu">
+          {{#each categories}}
+            <div category="{{name}}" class="menuItem" title="{{display}}">
+                <img src="{{@root.host}}/{{icon}}" alt="{{display}}" />
+            </div>
+          {{/each}}
+        </div>
+      </div>
+        <div id="{{id}}_categoryLabel" class="categoryTitleStyle"></div>
+    {{/if}}
+  <div id="{{id}}_browserBody" class="fBrowserBody fbBody-margin">
+      {{#if showSearch}}
+    <div class="fbSearch">
+      <input id="{{id}}_filter" class="fbSearchTextBox form-control" placeholder="search member resources" />
+    </div>
+      {{/if}}
+
+    <div class="panel-group results-panel" id="{{id}}_fileContainer" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default" rv-each-group="groups" >
+            <div rv-show="group.match">
+                <div class="fbGroupHeader fbHeader-margin" role="tab" rv-id="group.id | concat '' '_header'" data-toggle="collapse" 
+                    rv-href="group.id | concat '#' '_panel'" 
+                    rv-aria-expanded="group.opened" >
+                    <h4 class="panel-title">
+                        {group.title}
+                        <i class="fa fa-lg" rv-setIconOpened="group.opened"></i>
+                    </h4>
+                </div>
+                <div rv-id="group.id | concat '' '_panel'" class="panel-collapse collapse" 
+                     rv-class-in="group.opened" 
+                     rv-aria-expanded="group.opened" 
+                     rv-panelheight="group.opened"
+                     role="tabpanel">
+                    <div class="fbItemContainer container-fluid">
+                        <div class="fbItemList row">
+                            <div rv-each-file="group.files" rv-show="file.match" class="fbItem col col-sm-6 col-md-4 col-lg-3">
+                                <a class="fbItemBody" rv-action="file" rv-path="file.path" rv-ftype="file.type" rv-title="file.name">
+                                    <div class="fbItem-col1">
+                                        <i class="fbItem-icon fa" rv-setfileicon="file.type"></i>
+                                    </div>
+                                    <div class="fbItem-col2">
+                                        <div class="fbItem-name text-truncate row">{file.name}</div>
+                                        <div class="text-truncate row">
+                                            <label>Tags:</label>
+                                            <span class="fbItem-tags">{file.tags}</span>
+                                        </div>
+                                        <div class="fbItem-date row">
+                                            <label>Date:</label> { file.date | formatdate }
+                                        </div>
+                                    </div>
+                                </a>
+                                <!--<div class="fbItem-col3">-->
+                                <a rv-href="file.path | getdllink"><i action="download" class="fbItem-download fa fa-download"></i></a>
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <div rv-hide="hasResults" class="noresults-panel">
+          No Results
+      </div>
+    </div>
+    <div id="{{id}}_loadingPanel" class="loading-panel">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+  </div>
+
+    <div id="{{id}}_previewoverlay" class="preview-overlay no-display animated-3">
+        <i id="{{id}}_previewclose" class="previewCloseStyle fa fa-times fa-3x"></i>
+        <div id="{{id}}_preview" class="preview">
+        </div>
+    </div>
+
+
+</div>

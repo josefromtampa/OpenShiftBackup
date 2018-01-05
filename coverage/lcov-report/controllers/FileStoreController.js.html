@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers\FileStoreController.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">controllers\FileStoreController.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.05% <small>(3 / 74)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.05% <small>(3 / 74)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">controllers/</a> &#187; FileStoreController.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * FileStoreController
+ *
+ * @description :: Server-side logic for managing backend resource storage
+ * @help        :: See http://links.sailsjs.org/docs/controllers
+ */
+var stream = require('stream');
+&nbsp;
+var _fileStore = {
+&nbsp;
+    getFile: <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            var id = req.params.fileid;</span>
+&nbsp;
+            // find file
+<span class="cstat-no" title="statement not covered" >            FileCacheFactory.getFile(id).then(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (file){</span>
+<span class="cstat-no" title="statement not covered" >                    res.jsonp({success: true, data: file });</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    res.jsonp({ success: false, message: 'File not found'});</span>
+                }// if-else
+&nbsp;
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                sails.log.error('FileStoreController.getFile() Unable to retrieve folders - ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                res.serverError(e);</span>
+            });
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('FileStoreController.getFile() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            res.serverError('Unable to retrieve file');</span>
+        }// try-catch
+&nbsp;
+    },
+&nbsp;
+    getFolders: <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            FileCacheFactory.getFolders().then(<span class="fstat-no" title="function not covered" >function (folders) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (folders) {</span>
+<span class="cstat-no" title="statement not covered" >                    res.jsonp({ success: true, data: folders });</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    res.jsonp({ success: true, data: null });</span>
+                }// if-else
+                
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                sails.log.error('FileStoreController.getFolders() Unable to retrieve folders - ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                res.serverError(e);</span>
+            });
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('FileStoreController.getFolders() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            res.serverError('Unable to retrieve folders');</span>
+        }// try-catch
+&nbsp;
+    },
+&nbsp;
+    download: <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+            // get wildcard param for path
+<span class="cstat-no" title="statement not covered" >            var filePath = req.params[0];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            sails.log.debug('FileStoreFactory.download() Downloading file ' + filePath);</span>
+        
+            // log action
+<span class="cstat-no" title="statement not covered" >            SalesForce.logAction('download', req.tokenSession.owner.name, filePath);</span>
+&nbsp;
+            // call method and pipe file response back
+            //FileStoreFactory.file.download(filePath).pipe(res);
+&nbsp;
+            // call method and pipe file response back
+<span class="cstat-no" title="statement not covered" >            var lastIdx = filePath.lastIndexOf('/');</span>
+<span class="cstat-no" title="statement not covered" >            var file = filePath.substring(lastIdx + 1);</span>
+<span class="cstat-no" title="statement not covered" >            sails.log.info('Setting file header for ' + file);</span>
+<span class="cstat-no" title="statement not covered" >            res.setHeader('Content-disposition', 'attachment; filename=' + file);</span>
+            
+<span class="cstat-no" title="statement not covered" >            FileStoreFactory.file.get(filePath)</span>
+                .then(<span class="fstat-no" title="function not covered" >function (fileRes) {</span>
+&nbsp;
+                    // pipe response back
+<span class="cstat-no" title="statement not covered" >                    fileRes.pipe(res, { end: true })</span>
+                        .on('finish', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('File download finished transferring');</span>
+                        });
+<span class="cstat-no" title="statement not covered" >                    fileRes.resume();</span>
+&nbsp;
+                }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                    sails.log.error('FormController.getImage() - Get image failed ' + JSON.stringify(e));</span>
+<span class="cstat-no" title="statement not covered" >                    res.serverError({ error: 'Unable to retrieve file' });</span>
+&nbsp;
+                });
+&nbsp;
+        } catch(e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('FileStoreController.download() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            res.serverError('Unable to download file');</span>
+        }// try-catch
+    },
+&nbsp;
+    preview: <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+            // get wildcard param for path
+<span class="cstat-no" title="statement not covered" >            var filePath = req.params[0];</span>
+&nbsp;
+            // call method and pipe file response back
+<span class="cstat-no" title="statement not covered" >            FileStoreFactory.file.get(filePath)</span>
+                .then(<span class="fstat-no" title="function not covered" >function (fileRes) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    sails.log.info('Preview got response for ' + filePath);</span>
+                    // pipe response back
+<span class="cstat-no" title="statement not covered" >                    fileRes.pipe(res, { end: true })</span>
+                        .on('finish', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('Preview file finished transferring ' + filePath);</span>
+                        });
+<span class="cstat-no" title="statement not covered" >                    sails.log.info('Preview response piped, now resuming');</span>
+<span class="cstat-no" title="statement not covered" >                    fileRes.resume();</span>
+&nbsp;
+&nbsp;
+                }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                    sails.log.error('FormController.getImage() - Get image failed ' + JSON.stringify(e));</span>
+<span class="cstat-no" title="statement not covered" >                    res.serverError({ error: 'Unable to retrieve file' });</span>
+&nbsp;
+                });
+&nbsp;
+            //// call method and pipe file response back
+            //FileStoreFactory.file.download(filePath).on('response', function (r) {
+&nbsp;
+            //    if (r &amp;&amp; r.headers &amp;&amp; r.headers['content-disposition']) {
+            //        // remove the "attachment" attribute from header so it does not trigger auto-download
+            //        r.headers['content-disposition'] = r.headers['content-disposition'].replace('attachment;', '');
+            //        r.headers['content-type'] = r.headers['content-type'].replace(';charset=UTF-8', '');
+            //        delete r.headers['set-cookie'];
+            //        delete r.headers['egnyte-etag'];
+            //        delete r.headers['etag'];
+            //        delete r.headers['x-egnyte-request-id'];
+            //        delete r.headers['x-content-type-options'];
+            //        delete r.headers['x-sha512-checksum'];
+            //        delete r.headers['x-robots-tag'];
+            //        delete r.headers['x-mashery-responder'];
+&nbsp;
+            //    }// if-else
+&nbsp;
+            //}).pipe(res);
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('FileStoreController.preview() Exception ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            res.serverError('Unable to retrieve file preview');</span>
+        }// try-catch
+&nbsp;
+    },
+&nbsp;
+    stream: <span class="fstat-no" title="function not covered" >function (req, res) {</span>
+        
+        // get wildcard param for path
+<span class="cstat-no" title="statement not covered" >        var filePath = req.params[0];</span>
+<span class="cstat-no" title="statement not covered" >        var buffer = null;</span>
+        
+        // call method and pipe file response back
+<span class="cstat-no" title="statement not covered" >        FileStoreFactory.file.download(filePath).on('response', <span class="fstat-no" title="function not covered" >function (r) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (r &amp;&amp; r.headers &amp;&amp; r.headers['content-disposition']) {</span>
+                // remove the "attachment" attribute from header so it does not trigger auto-download
+<span class="cstat-no" title="statement not covered" >                r.headers['content-disposition'] = r.headers['content-disposition'].replace('attachment;', '');</span>
+<span class="cstat-no" title="statement not covered" >                r.headers['content-type'] = r.headers['content-type'].replace(';charset=UTF-8', '');</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['set-cookie'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['egnyte-etag'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['etag'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['x-egnyte-request-id'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['x-content-type-options'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['x-sha512-checksum'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['x-robots-tag'];</span>
+<span class="cstat-no" title="statement not covered" >                delete r.headers['x-mashery-responder'];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                r.on('data', <span class="fstat-no" title="function not covered" >function (chunk) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (buffer) {</span>
+<span class="cstat-no" title="statement not covered" >                        buffer += chunk;</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        buffer = chunk;</span>
+                    }// if
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                r.on('end', <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    res.writeHead(206, {</span>
+                        "Content-Range": "bytes " + start + "-" + end + "/" + total,
+                        "Accept-Ranges": "bytes",
+                        "Content-Length": buffer.length,
+                        "Content-Type": "video/mp4"
+                    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    var buffer = new Buffer('foo');</span>
+<span class="cstat-no" title="statement not covered" >                    var bufferStream = new stream.PassThrough();</span>
+<span class="cstat-no" title="statement not covered" >                    bufferStream.end(buffer);</span>
+<span class="cstat-no" title="statement not covered" >                    bufferStream.pipe(res);</span>
+                });
+&nbsp;
+&nbsp;
+            }// if-else
+&nbsp;
+        }).pipe(res);
+&nbsp;
+&nbsp;
+    }
+&nbsp;
+};
+&nbsp;
+&nbsp;
+&nbsp;
+module.exports = {
+&nbsp;
+    download: _fileStore.download,
+    preview: _fileStore.preview,
+    stream: _fileStore.stream,
+    getFolders: _fileStore.getFolders,
+    getFile: _fileStore.getFile
+};
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 09:25:55 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

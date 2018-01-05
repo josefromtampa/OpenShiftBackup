@@ -1,0 +1,23 @@
+{
+  "name": "ibhs_api",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Laicos/ibhs_api",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rivets": "#0.8.0",
+    "bootstrap": "#3.3.2",
+    "jquery": "#2.1.3",
+    "handlebars": "#3.0.0",
+    "font-awesome": "#4.3.0",
+    "owl-carousel": "#1.3.3",
+    "jqvmap": "https://github.com/manifestinteractive/jqvmap.git"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chris Loves Maps</title>
+
+  <!--  ibhs map style  -->
+  <link type="text/css" rel="stylesheet" href="/components/jqvmap/jqvmap/jqvmap.css"/>
+  <!--  /ibhs map style  -->
+
+  <link type="text/css" rel="stylesheet" href="/styles/ibhs.riskmap.css"/>
+  <script src="/components/jquery/jquery.min.js"></script>
+
+  <!--  ibhs map javascript  -->
+  <script src="/js/ibhs.riskmap.packed.js"></script>
+  <!--  /ibhs map javascript  -->
+
+  <script defer>
+    $(document).ready(function () {
+      $('#ibhs-riskmap-map').ibhsRiskMap('https://test-ibhs.rhcloud.com')
+    })
+  </script>
+</head>
+
+<body>
+  <!-- map container -->
+  <div id="ibhs-riskmap-map"
+       style="width: 600px; height: 400px;"></div>
+  <!-- /map container -->
+
+  <div>
+    <!-- risk classes -->
+    <div class="ibhs-riskmap-risk 238">wildfire</div>
+    <div class="ibhs-riskmap-risk 275">hurricane</div>
+    <div class="ibhs-riskmap-risk 243">water intrusion</div>
+    <div class="ibhs-riskmap-risk 235">flood</div>
+    <div class="ibhs-riskmap-risk 237">high winds</div>
+    <div class="ibhs-riskmap-risk 236">freezing weather</div>
+    <div class="ibhs-riskmap-risk 275">earthquake</div>
+    <div class="ibhs-riskmap-risk 240">tornado</div>
+    <!-- /risk classes -->
+  </div>
+
+  <div>
+    <!-- zipcode input class -->
+    <input type="text"
+           id="ibhs-riskmap-zipcode"/>
+    <!-- /zipcode input class -->
+
+    <!-- zipcode submit class -->
+    <input type="button"
+           class="ibhs-riskmap-busy"
+           id="ibhs-riskmap-submit"
+           value="submit"/>
+    <!-- /zipcode submit class -->
+
+    <input type="button"
+           value="reset"
+           class="ibhs-riskmap-reset"/>
+
+
+    <span class="loading ibhs-riskmap-busy">
+      Loading...
+    </span>
+
+    <span class="ibhs-riskmap-result-success">
+      Your results have been forged in the fires of ibhs.
+    </span>
+  </div>
+
+</body>
+</html>

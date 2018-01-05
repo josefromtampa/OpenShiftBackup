@@ -1,0 +1,411 @@
+﻿
+/* gernal styles */
+.text-truncate {
+    text-overflow: ellipsis;
+    text-wrap: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* file browser styles */
+.fbPanelGroup {
+  width: 100%;
+  overflow-y: scroll;
+}
+.categoryTitleStyle {
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    color: #0093B5;
+}
+.fBrowser {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+.fbBody-margin {
+    margin: auto 40px auto 50px;
+}
+.fBrowserBody .panel {
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.results-panel {
+    display: none;
+}
+.noresults-panel {
+    text-align: center;
+    font-size: 24px;
+    color: #999;
+}
+.loading-panel {
+    color: #999;
+    text-align: center;
+    margin: 100px auto 100px auto;
+}
+.fBrowserMenu {
+    background-color: #666;
+    overflow: hidden;
+}
+.fbMenu {
+    width: inherit;
+    color: #ffffff;
+    background-color: #666;
+    margin: auto 50px auto 50px;
+}
+.menuItem {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+}
+    .menuItemx:hover {
+        background-color: rgba(255, 255, 255, .4);
+    }
+    .menuItem img {
+        height: 40px;
+        width: auto;
+    }
+.active-menu {
+    background-color: rgba(255, 255, 255, .4);
+}
+.owl-controls {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.owl-theme .owl-controls .owl-buttons div {
+    background: none;
+    border-radius: 0px;
+    top: -10px;
+    color: rgba(255, 255, 255, .9);
+    font-size: 40px;
+}
+.owl-prev {
+    position: absolute;
+    left: -40px;
+}
+.owl-next {
+    position: absolute;
+    right: -40px;
+}
+.fbSearchTextBox {
+    width: 50%;
+    min-width: 200px;
+    margin: 25px auto 25px auto;
+    padding-left: 30px;
+    background-color: #E5EBF0;
+    background-image: url('../../images/search.png');
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position: 5px center;
+}
+.fbGroupHeader {
+    position: relative;
+    cursor: pointer;
+    border-radius: 0px;
+    padding: 10px 0px 10px 20px;
+    background-color: #0093B5;
+    color: #ffffff;
+    font-weight: bold;
+}
+    .fbGroupHeader i {
+        position: absolute;
+        right: 25px;
+        color: #9dcf3c;
+    }
+.fbHeader-margin {
+    margin: auto 10px auto auto;
+}
+.fbItemContainer {
+    padding: 0px;
+}
+.fbItemList {
+    margin: auto;
+}
+    .fbItemList .row {
+        margin: auto;
+    }
+.fbItem {
+    position: relative;
+    height: 75px;
+    background-color: #E5EBF0;
+    margin-top: 10px;
+    border-right: 10px solid #fff;
+    color: #666;
+    padding: 0px;
+    cursor: pointer;
+}
+    .fbItem:hover {
+        background-color: #ccc;
+    }
+    .fbItem .row {
+        text-overflow: ellipsis;
+        text-wrap: none;
+        white-space: nowrap;
+    }
+    .fbItem a,
+    .fbItem a:active,
+    .fbItem a:visited,
+    .fbItem a:link {
+        color: #666;
+    }
+        .fbItem a:hover {
+            color: #fff;
+        }
+.fbItem-col1 {
+    width: 55px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+}
+.fbItem-col2 {
+    width: calc(100% - 75px);
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 65px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+.fbItem-col3 {
+    width: 35px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+}
+.fbItem-name {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    text-wrap: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.fbItem-icon {
+    position: relative;
+    float: left;
+    margin: 16px auto auto 10px;
+    font-size: 40px;
+}
+.fbItem-preview {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #666;
+    cursor: pointer;
+    display: none;
+}
+    .fbItem-preview:hover {
+        color: #fff;
+        font-weight: bold;
+    }
+.fbItem-download,
+.fbItem-download:visited,
+.fbItem-download:active,
+.fbItem-download:link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #666;
+    cursor: pointer;
+    z-index: 5;
+    font-size: 20px;
+}
+    .fbItem-download:hover {
+        color: #fff;
+    }
+.fLink {
+    width: 200px;
+    padding: 5px;
+    background-color: rgba(0,147,181, .7);
+    cursor: pointer;
+}
+    .fLink:hover {        
+            background-color: rgba(0,147,181, 1);
+    }
+    .fLink a,
+    .fLink a:visited,
+    .fLink a:active,
+    .fLink a:link {
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+        .fLink a:hover {
+            text-decoration: none;
+        }
+.flink-icon {
+    font-size: 22px;
+    margin-right: 5px;
+}
+.fa-file-pdf-o {
+    color: #cc0000;
+}
+.fa-file-powerpoint-o {
+    color: #D04525;
+}
+.fa-file-excel-o {
+    color: #388F35;
+}
+.fa-file-word-o {
+    color: #2564A9;
+}
+.fa-file-audio-o {
+    color: #27A6D9;
+}
+.fa-file-video-o {
+    color: #cc0000;
+}
+.fa-file-image-o {
+    color: #03a9f4;
+}
+.fa-file-archive-o {
+    color: #ffc107;
+}
+.fa-file-text-o {
+    color: #666;
+}
+.fa-file-o {
+    color: #666;
+}
+.previewCloseStyle {
+    color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    cursor: pointer;
+}
+.preview-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+}
+.preview {
+    margin: auto;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    overflow: hidden;
+    z-index: 100;
+    background-color: #cccccc;
+}
+    .preview iframe {
+        border: none;
+    }
+.no-display {
+    display: none;
+}
+/* Animations */
+.animated-8 { 
+    -webkit-animation-duration: 800ms; 
+    animation-duration: 800ms; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+.animated-3 { 
+    -webkit-animation-duration: 800ms; 
+    animation-duration: 800ms; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInDown { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
+@-webkit-keyframes fadeOutUp { 
+    0% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+    100% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+} 
+@keyframes fadeOutUp { 
+    0% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+    100% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+} 
+.fadeOutUp { 
+    -webkit-animation-name: fadeOutUp; 
+    animation-name: fadeOutUp; 
+}
+/* Phones */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+    .fbBody-margin {
+        margin: auto;
+    }
+    .fbMenu {
+        margin: auto 25px auto 25px;
+    }
+    
+    .fbSearchTextBox {
+        width: 100%;
+    }
+    .fbHeader-margin {
+        margin: auto;
+    }
+    .fbItem {
+        border-right: 0px;
+    }
+
+}
+/* iPads and tablets */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+    .fbBody-margin {
+        margin: auto 15px auto 25px;
+    }
+}
+@media only screen and (min-width: 868px) {
+    .fbMenu {
+        margin: auto 10px auto 10px;
+    }
+}
+

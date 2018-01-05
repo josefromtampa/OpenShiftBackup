@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services\SyncFactory.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">services\SyncFactory.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4% <small>(6 / 150)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 58)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4% <small>(6 / 150)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">services/</a> &#187; SyncFactory.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿
+/*
+*   Title: SyncFactory.js
+*   Description: This module manages the business rules and syncronization of the file store cache.
+*/
+&nbsp;
+var async = require('async');
+var q = require('q');
+&nbsp;
+var _job = null;
+var _timeout = 200;
+&nbsp;
+var _folderSync = {
+&nbsp;
+    clean: <span class="fstat-no" title="function not covered" >function(processDate){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            try {</span>
+&nbsp;
+                // delete all before process date
+<span class="cstat-no" title="statement not covered" >                FolderCache.destroy({ updatedAt: { $lt: processDate } }).exec(<span class="fstat-no" title="function not covered" >function (e) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (e) {</span>
+<span class="cstat-no" title="statement not covered" >                        reject(e);</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        resolve();</span>
+                    }// if-else
+                });
+&nbsp;
+            } catch (e) {
+<span class="cstat-no" title="statement not covered" >                sails.log.error('SyncFactory._folderSync.clean() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >                reject(e.message);</span>
+            }// try-catch
+&nbsp;
+        });
+        
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+    },
+&nbsp;
+    syncCategories: <span class="fstat-no" title="function not covered" >function(parent, type, owner, folders, categoryOverride){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function(resolve, reject, inform){</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            try {</span>
+&nbsp;
+                // recurse for subfolders
+<span class="cstat-no" title="statement not covered" >                async.eachSeries(folders, <span class="fstat-no" title="function not covered" >function (folder, catCallback) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    sails.log.info('SyncFactory._folderSync.syncCategories() retrieving category ' + folder.name + ' folder for ' + parent);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    setTimeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+                        // get and cache each category result
+<span class="cstat-no" title="statement not covered" >                        FileStoreFactory.file.list(parent + '/' + folder.name).then(<span class="fstat-no" title="function not covered" >function (catResults) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('SyncFactory._folderSync.syncCategories() caching category ' + folder.name + ' folder for ' + parent);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (catResults.success &amp;&amp; catResults.data.files &amp;&amp; catResults.data.files.length &gt; 0) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    FolderCache.upsert(type, owner.toLowerCase(), (categoryOverride ? categoryOverride.toLowerCase() : folder.name.toLowerCase()), folder.name, catResults.data.files, 'cache',</span>
+<span class="fstat-no" title="function not covered" >                                        function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                                            if (e) {</span>
+<span class="cstat-no" title="statement not covered" >                                                sails.log.error('SyncFactory._folderSync.syncCategories() Cache save failed - ' + e);</span>
+                                            }// if
+<span class="cstat-no" title="statement not covered" >                                            catCallback();</span>
+                                        });
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    if (!catResults.success) {</span>
+<span class="cstat-no" title="statement not covered" >                                        sails.log.error('SyncFactory._folderSync.syncCategories() file list response ' + JSON.stringify(catResults));</span>
+                                    }// if
+&nbsp;
+                                    // next
+<span class="cstat-no" title="statement not covered" >                                    catCallback();</span>
+                                }// if-else
+                            } catch (e) {
+<span class="cstat-no" title="statement not covered" >                                sails.log.error('SyncFactory._folderSync.syncCategories() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >                                catCallback();</span>
+                            }// try-catch
+                        }).fail(<span class="fstat-no" title="function not covered" >function(e){</span>
+<span class="cstat-no" title="statement not covered" >                            reject(e);</span>
+                        });
+                    }, _timeout);
+&nbsp;
+                }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+                    // all done
+<span class="cstat-no" title="statement not covered" >                    if (e) {</span>
+                        // error occurred
+<span class="cstat-no" title="statement not covered" >                        sails.log.error('SyncFactory._folderSync.syncCategories() Exception() for folder ' + parent + ' - ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                        reject(e);</span>
+                    } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        sails.log.info('SyncFactory._folderSync.syncCategories() categories cached for folder ' + parent);</span>
+<span class="cstat-no" title="statement not covered" >                        resolve({success: true, message: 'Categories cached'});</span>
+&nbsp;
+                    }// if-else
+                });
+&nbsp;
+            } catch (e) {
+<span class="cstat-no" title="statement not covered" >                sails.log.error('SyncFactory._folderSync.syncCategories() Exception for folder ' + parent + ' - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >                reject(e.message);</span>
+            }// try-catch
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+    },
+&nbsp;
+    syncRoot: <span class="fstat-no" title="function not covered" >function (root, type, owner, name, cacheRoot, cacheCategories, categoryOverride) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.info('SyncFactory._folderSync.syncRoot() Retrieving ' + type + ' folder for sync');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        cacheRoot = cacheRoot != undefined ? cacheRoot : true;</span>
+<span class="cstat-no" title="statement not covered" >        cacheCategories = cacheCategories != undefined ? cacheCategories : false;</span>
+&nbsp;
+            // get all files
+<span class="cstat-no" title="statement not covered" >        return FileStoreFactory.file.list(root).then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            sails.log.info('SyncFactory._folderSync.syncRoot() caching ' + type + ' folder');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (results.success) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (cacheRoot &amp;&amp; results.data.files &amp;&amp; results.data.files.length &gt; 0) {</span>
+                        // cache root
+<span class="cstat-no" title="statement not covered" >                        FolderCache.upsert(type, (owner ? owner.toLowerCase() : ''), (categoryOverride ? categoryOverride.toLowerCase() : ''), name, results.data.files, 'cache',</span>
+<span class="fstat-no" title="function not covered" >                            function (e) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (e) {</span>
+<span class="cstat-no" title="statement not covered" >                                    sails.log.error('SyncFactory._folderSync.syncRoot() ' + type + ' folder cache error - ' + e);</span>
+&nbsp;
+                                } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                    sails.log.info('SyncFactory._folderSync.syncPublic() public folder cached');</span>
+                                }// if-else
+                            });
+                    }// if
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    sails.log.info('SyncFactory._folderSync.syncRoot() processing ' + type + ' folders ' + JSON.stringify(results.data.folders));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if (cacheCategories &amp;&amp; results.data.folders &amp;&amp; results.data.folders.length &gt; 0) {</span>
+&nbsp;
+                        // sync categories
+<span class="cstat-no" title="statement not covered" >                        return _folderSync.syncCategories(root, type, (owner ? owner.toLowerCase() : results.data.name.toLowerCase()), results.data.folders, categoryOverride)</span>
+                            .then(<span class="fstat-no" title="function not covered" >function (results) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                sails.log.info('SyncFactory._folderSync.syncRoot() categories synced for ' + root);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if (results.success) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return ({ success: true, data: results.data, message: 'Root and categories cached' });</span>
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    return ({ success: true, data: results.data, message: 'Root cached, catagories did not cache' });</span>
+                                }// if-else
+                            });
+&nbsp;
+&nbsp;
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        sails.log.info('SyncFactory._folderSync.syncRoot() No folders to cache for ' + root);</span>
+<span class="cstat-no" title="statement not covered" >                        return ({ success: true, data: results.data, message: 'Root cached' });</span>
+                    }// if-else
+&nbsp;
+                } catch (e) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    sails.log.error('SyncFactory._folderSync.syncRoot() Root parse exception - ' + e.message);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    throw (e.message);</span>
+                }// try-catch
+&nbsp;
+            } else {
+<span class="cstat-no" title="statement not covered" >                sails.log.warn('SyncFactory._folderSync.syncRoot() No root results for ' + root);</span>
+                //resolve({ success: false, message: 'No root results' });
+<span class="cstat-no" title="statement not covered" >                throw (results.message);</span>
+            }// if-else
+&nbsp;
+        }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SyncFactory._folderSync.syncRoot() Exception retrieving list for ' + root);</span>
+<span class="cstat-no" title="statement not covered" >            throw (e);</span>
+        });
+&nbsp;
+    },
+&nbsp;
+    syncPublic: <span class="fstat-no" title="function not covered" >function (done) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.debug('SycFactory syncPublic() starting');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            var type = FolderCache.folderTypes.public;</span>
+<span class="cstat-no" title="statement not covered" >            var root = sails.config.egnyte.root + type;</span>
+&nbsp;
+            // sync root and categories within
+<span class="cstat-no" title="statement not covered" >            _folderSync.syncRoot(root, type, '', '', false, true).then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                done();</span>
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                done(e);</span>
+            });
+&nbsp;
+        } catch (e){
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SyncFactory._folderSync.syncPublic() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            done(e.message);</span>
+        }// try-catch
+    },
+&nbsp;
+    syncMember: <span class="fstat-no" title="function not covered" >function (done) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.debug('SycFactory syncMember() starting');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var type = FolderCache.folderTypes.member;</span>
+<span class="cstat-no" title="statement not covered" >            var root = sails.config.egnyte.root + type;</span>
+&nbsp;
+            // sync root and categories within
+<span class="cstat-no" title="statement not covered" >            _folderSync.syncRoot(root, type, '', '', false, true).then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+<span class="cstat-no" title="statement not covered" >                done();</span>
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                done(e);</span>
+            });
+            
+        } catch (e){
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SyncFactory._folderSync.syncMember() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            done(e.message);</span>
+        }// try-catch
+&nbsp;
+ 
+    },
+&nbsp;
+    syncCompany: <span class="fstat-no" title="function not covered" >function (done) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.debug('SyncFactory._folderSync.syncCompany() Retrieving companies for sync');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            var type = FolderCache.folderTypes.company;</span>
+<span class="cstat-no" title="statement not covered" >            var root = sails.config.egnyte.root + type;</span>
+&nbsp;
+            // get companies
+<span class="cstat-no" title="statement not covered" >            _folderSync.syncRoot(root, type, '', '', false, true, 'home').then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                done();</span>
+           
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sails.log.info('SyncFactory._folderSync.syncCompany() - Company sync exception ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                done(e);</span>
+            });
+&nbsp;
+        } catch (e) {
+            
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SyncFactory._folderSync.syncCompany() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            done(e.message);</span>
+&nbsp;
+        }// try-catch
+    },
+&nbsp;
+    syncCommittee: <span class="fstat-no" title="function not covered" >function (done) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.debug('SyncFactory._folderSync.syncCommittee() Retrieving committees for sync');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >            var type = FolderCache.folderTypes.committee;</span>
+<span class="cstat-no" title="statement not covered" >            var root = sails.config.egnyte.root + type;</span>
+&nbsp;
+            // get committees but don't cache yet
+<span class="cstat-no" title="statement not covered" >            _folderSync.syncRoot(root, type, '', '', false, false).then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (results.success &amp;&amp; results.data.folders &amp;&amp; results.data.folders.length &gt; 0) {</span>
+                    // iterate committees
+<span class="cstat-no" title="statement not covered" >                    async.eachSeries(results.data.folders, <span class="fstat-no" title="function not covered" >function (folder, folderCallback) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        setTimeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+                            // cache committee root and categories
+<span class="cstat-no" title="statement not covered" >                            _folderSync.syncRoot(root + '/' + folder.name, type, folder.name, folder.name, true, true, 'committee')</span>
+                                .then(<span class="fstat-no" title="function not covered" >function (results) {</span>
+                                    
+<span class="cstat-no" title="statement not covered" >                                    folderCallback();</span>
+                                });
+                        }, _timeout);
+&nbsp;
+                    }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (e) {</span>
+                            // error occurred
+<span class="cstat-no" title="statement not covered" >                            sails.log.error('SyncFactory._folderSync.syncCommittee() Exception() - ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                            done(e);</span>
+                        } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('SyncFactory._folderSync.syncCommittee() committees cached');</span>
+<span class="cstat-no" title="statement not covered" >                            done();</span>
+&nbsp;
+                        }// if-else
+                    });
+&nbsp;
+                } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    sails.log.info('SyncFactory._folderSync.syncCommittee() - No committees to sync');</span>
+<span class="cstat-no" title="statement not covered" >                    done();</span>
+                }// if-else
+&nbsp;
+            }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sails.log.info('SyncFactory._folderSync.syncCommittee() - Committees sync exception ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                done(e);</span>
+            });
+&nbsp;
+        } catch (e) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SyncFactory._folderSync.syncCommittee() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            done(e.message);</span>
+&nbsp;
+        }// try-catch
+    },
+&nbsp;
+    syncAll: <span class="fstat-no" title="function not covered" >function () {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var now = new Date();</span>
+&nbsp;
+                // sync all
+<span class="cstat-no" title="statement not covered" >                async.series([_folderSync.syncPublic, _folderSync.syncMember, _folderSync.syncCommittee, _folderSync.syncCompany],</span>
+<span class="fstat-no" title="function not covered" >                function (err, results) {</span>
+                            
+<span class="cstat-no" title="statement not covered" >                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                        reject(err);</span>
+                    } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        console.log(now.toISOString());</span>
+&nbsp;
+                        // sync is done - now delete old records that was not updated
+<span class="cstat-no" title="statement not covered" >                        _folderSync.clean(now).then(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('SyncFactory._folderSync.syncAll() Clean-up completed');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            resolve({ success: true, results: results, message: 'Folder cache successfully synced' });</span>
+                        }).fail(<span class="fstat-no" title="function not covered" >function (e) {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.warn('SycFactory._folderSync.syncAll() Clean-up failed - ' + e);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            resolve({ success: true, results: results, message: 'Folder cache successfully synced' });</span>
+                        });
+&nbsp;
+                    }// if-else
+                        
+                });
+            } catch (e) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sails.log.error('SyncFactory._folderSync.syncAll() Exception - ' + e.message);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                reject('SyncFactory.syncAll() Exception - ' + e.message);</span>
+            }// try-catch
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+    },
+&nbsp;
+    clear: <span class="fstat-no" title="function not covered" >function () {</span>
+        // clear folder cache
+<span class="cstat-no" title="statement not covered" >        return FolderCache.destroy();</span>
+&nbsp;
+    },
+&nbsp;
+    checkForUpdates: <span class="fstat-no" title="function not covered" >function (callback) {</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            FileStoreFactory.pollLastEvent().then(<span class="fstat-no" title="function not covered" >function (results) {</span></span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (results.success) {</span>
+&nbsp;
+                    // check for previous event 
+<span class="cstat-no" title="statement not covered" >                    var hasUpdates = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    Cache.findOne({ key: 'eventCursor' }).exec(<span class="fstat-no" title="function not covered" >function cb(e, doc) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        sails.log.info('got event document');</span>
+<span class="cstat-no" title="statement not covered" >                        if (e) {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.error('SyncFactory.checkForUpdates Exception - ' + e);</span>
+<span class="cstat-no" title="statement not covered" >                            throw e;</span>
+                        } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            if (doc &amp;&amp; doc.value) {</span>
+&nbsp;
+                                // check if previous event changed
+<span class="cstat-no" title="statement not covered" >                                hasUpdates = doc.value.latest_event_id != results.data.latest_event_id;</span>
+                            } else {
+                                // first time, return true
+<span class="cstat-no" title="statement not covered" >                                hasUpdates = true;</span>
+                            }// if-else
+&nbsp;
+                        }// if
+&nbsp;
+                        // save event to cache
+<span class="cstat-no" title="statement not covered" >                        Cache.upsert('eventCursor', results.data, <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            sails.log.debug('SyncFactory.checkForUpdates() - Has updates ' + hasUpdates);</span>
+<span class="cstat-no" title="statement not covered" >                            callback(hasUpdates);</span>
+                        });
+&nbsp;
+                    });
+&nbsp;
+                } else {
+<span class="cstat-no" title="statement not covered" >                    sails.log.warn('SyncFactory.checkForUpdates() - Unable to poll for last event');</span>
+<span class="cstat-no" title="statement not covered" >                    callback(false);</span>
+                }// if-else
+&nbsp;
+&nbsp;
+            });
+&nbsp;
+&nbsp;
+&nbsp;
+    }
+&nbsp;
+};
+&nbsp;
+&nbsp;
+module.exports = {
+&nbsp;
+    // sync once
+    sync: _folderSync.syncAll,
+&nbsp;
+    // empty sync cache
+    empty: _folderSync.clear,
+&nbsp;
+    updateCheck: _folderSync.checkForUpdates
+&nbsp;
+};</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 09:25:55 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

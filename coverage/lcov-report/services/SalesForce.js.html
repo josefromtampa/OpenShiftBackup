@@ -1,0 +1,1341 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services\SalesForce.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">services\SalesForce.js</span></h1>
+    <h2>
+        Statements: <span class="metric">7.76% <small>(9 / 116)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 33)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">7.76% <small>(9 / 116)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">services/</a> &#187; SalesForce.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">﻿/*
+    Name: salesforce.js
+    Description: This module handles intermeidary methods to a SalesForce endpoint.
+&nbsp;
+*/
+&nbsp;
+var q = require('q');
+var request = require('request');
+var jsforce = require('jsforce');
+var _sfConn = null;
+var _batchSize = 10000;
+&nbsp;
+var _parser = {
+&nbsp;
+    parseUser: <span class="fstat-no" title="function not covered" >function (sfUser) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+        
+<span class="cstat-no" title="statement not covered" >            if (sfUser) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var user = {</span>
+                    id: sfUser.Id,
+                    name: sfUser.Name,
+                    username: sfUser.Web_Login_Name__c,
+                    membershipLevel: sfUser.Contact_Membership_Level__c,
+                    isRACMember: (sfUser.npsp__Primary_Affiliation__r 
+                                    &amp;&amp; sfUser.npsp__Primary_Affiliation__r.Current_RAC_Memberships__c &gt; 0),
+                    company: _parser.parseCompany(sfUser.npsp__Primary_Affiliation__r), // parse company obj
+                    committees: [],
+                    groups: []
+                };
+&nbsp;
+&nbsp;
+                // membership group
+<span class="cstat-no" title="statement not covered" >                if (user.membershipLevel) {</span>
+<span class="cstat-no" title="statement not covered" >                    user.groups.push(user.membershipLevel);</span>
+                }// if
+&nbsp;
+                // if RAC member set RAC group
+<span class="cstat-no" title="statement not covered" >                if (user.isRACMember) {</span>
+<span class="cstat-no" title="statement not covered" >                    user.groups.push('RAC');</span>
+                }// if
+&nbsp;
+                // set company group
+<span class="cstat-no" title="statement not covered" >                if (user.company) {</span>
+<span class="cstat-no" title="statement not covered" >                    user.groups.push(user.company.name + ' - ' + user.company.id);</span>
+                }// if
+                
+                // set committees group
+<span class="cstat-no" title="statement not covered" >                if (sfUser.Committee_Memberships__r &amp;&amp; sfUser.Committee_Memberships__r.records &amp;&amp; sfUser.Committee_Memberships__r.records.length &gt; 0) {</span>
+&nbsp;
+                    // parse committees
+<span class="cstat-no" title="statement not covered" >                    user.committees = _.map(sfUser.Committee_Memberships__r.records, <span class="fstat-no" title="function not covered" >function (c) {</span></span>
+&nbsp;
+                        // parse committee
+<span class="cstat-no" title="statement not covered" >                        var comm = _parser.parseCommittee(c);</span>
+&nbsp;
+                        // add committee group
+<span class="cstat-no" title="statement not covered" >                        user.groups.push(comm.name + ' - ' + comm.id);</span>
+&nbsp;
+                        // add committee role
+<span class="cstat-no" title="statement not covered" >                        if (comm.role) {</span>
+<span class="cstat-no" title="statement not covered" >                            user.groups.push(cur.name + ' - ' + comm.role + ' - ' + comm.id);</span>
+                        }// if
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        return comm;</span>
+                    })
+&nbsp;
+                } // if
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return user;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+&nbsp;
+            }// if-else
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SalesForce._parser.parseUser() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            throw e;</span>
+        }// try-catch
+    },
+&nbsp;
+    parseCompany: <span class="fstat-no" title="function not covered" >function (sfCompany) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (sfCompany) {</span>
+<span class="cstat-no" title="statement not covered" >                return {</span>
+                    id: sfCompany.Id,
+                    name: sfCompany.Name,
+                    inRAC: sfCompany.Current_RAC_Memberships__c &gt; 0
+                };
+            } else {
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            }// if-else
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SalesForce._parser.parseCompany() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            throw e;</span>
+        }// try-catch
+&nbsp;
+    },
+&nbsp;
+    parseCommittee: <span class="fstat-no" title="function not covered" >function (sfCommittee) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        try {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (sfCommittee) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (sfCommittee.Committee__r) {</span>
+&nbsp;
+                    // parse committee membership
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        id: sfCommittee.Committee__r.Id,
+                        name: sfCommittee.Committee__r.Name,
+                        role: sfCommittee.role__c
+                    };
+                } else {
+&nbsp;
+                    // parse committee
+<span class="cstat-no" title="statement not covered" >                    return {</span>
+                        id: sfCommittee.Id,
+                        name: sfCommittee.Name
+                    };
+                }// if-else
+&nbsp;
+            } else {
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            }// if-else
+&nbsp;
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >            sails.log.error('SalesForce._parser.parseCommittee() Exception - ' + e.message);</span>
+<span class="cstat-no" title="statement not covered" >            throw e;</span>
+        }// try-catch
+    }
+&nbsp;
+};
+&nbsp;
+&nbsp;
+var _auth = {
+&nbsp;
+    authenticateApp: <span class="fstat-no" title="function not covered" >function () {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (_sfConn &amp;&amp; _sfConn.accessToken) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sails.log.debug('SalesForce._auth.authenticateApp() Connection exists in cache');</span>
+&nbsp;
+                // return connnection in memory
+<span class="cstat-no" title="statement not covered" >                resolve(_sfConn);</span>
+            } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                sails.log.debug('SalesForce._auth.authenticateApp() Creating new connection to SalesForce with ' + sails.config.salesforce.username);</span>
+&nbsp;
+                // create new connection
+<span class="cstat-no" title="statement not covered" >                _sfConn = new jsforce.Connection();</span>
+<span class="cstat-no" title="statement not covered" >                _sfConn.login(sails.config.salesforce.username, sails.config.salesforce.password + sails.config.salesforce.token,</span>
+<span class="fstat-no" title="function not covered" >                    function (err, userInfo) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.error('SalesForce._auth.authenticateApp() ' + err);</span>
+<span class="cstat-no" title="statement not covered" >                            reject(err);</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            sails.log.debug('SalesForce._auth.autehnticateApp() Caching connection');</span>
+<span class="cstat-no" title="statement not covered" >                            resolve(_sfConn);</span>
+                        }// if-else
+&nbsp;
+                    });
+            }// if-else
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+&nbsp;
+    },
+&nbsp;
+    // Authenticates a user against salesforce
+    authenticateUser: <span class="fstat-no" title="function not covered" >function (username, password) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        sails.log.info('SalesForce._auth.authenticateUser() Authenticating user ' + username);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return _data.getMembers(username, password)</span>
+                    .then(<span class="fstat-no" title="function not covered" >function (results) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        sails.log.info('SalesForce._auth.authenticateUser() User exists');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (results &amp;&amp; results.success &amp;&amp; results.members &amp;&amp; results.members.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                            return { success: true, user: results.members[0] };</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return { success: false, user: null };</span>
+                        }// if-else
+&nbsp;
+                    }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+                        // propagate
+<span class="cstat-no" title="statement not covered" >                        throw e;</span>
+                    });
+    }
+};
+&nbsp;
+var _data = {
+&nbsp;
+    membershipLevels: ['Member', 'Full Member', 'Affiliate Member', 'Associate - Class IV', 'Associate Member - Class IV', 'Override'],
+&nbsp;
+    // gets list of users from salesforce
+    getMembers: <span class="fstat-no" title="function not covered" >function (username, password) {</span>
+        
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _auth.authenticateApp().then(<span class="fstat-no" title="function not covered" >function (conn) {</span></span>
+&nbsp;
+                /*
+                    SELECT id, name, web_login_name__c
+                            , npsp__Primary_Affiliation__r.name, npsp__Primary_Affiliation__r.id
+                            , (
+                                select committee__r.id,name, committee__r.name
+                                from Committee_Memberships__r
+                            )
+                    from Contact
+                    where Contact_Membership_Level__c in ('Full Member', 'Affiliate Member', 'Associate Member - Class IV', 'Override')
+                    and username = [username] // optional
+                    and password = [password] // optional
+                */
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var membership = JSON.stringify(_data.membershipLevels).replace(/\[/g, '(').replace(/\]/g, ')').replace(/"/g, "'");</span>
+&nbsp;
+                // get userinfo and authenticate credentials
+<span class="cstat-no" title="statement not covered" >                conn.sobject("Contact")</span>
+&nbsp;
+                    // root fields
+                  .select('id,name,web_login_name__c,web_login_password__c,npsp__Primary_Affiliation__r.name,Contact_Membership_Level__c,'
+                            + 'npsp__Primary_Affiliation__r.id,npsp__Primary_Affiliation__r.Current_RAC_Memberships__c')
+&nbsp;
+                    // sub query
+                  .include("Committee_Memberships__r")
+                    .select("committee__r.id,committee__r.name,role__c").end()
+&nbsp;
+                    // where
+                  .where("Contact_Membership_Level__c in " + membership
+                        + (username &amp;&amp; username != '' ? " and web_login_name__c='" + username + "'" : '')
+                        + (password &amp;&amp; password != '' ? " and web_login_password__c='" + password + "'" : ''))
+                  .execute({ autoFetch: true, maxFetch: _batchSize },
+<span class="fstat-no" title="function not covered" >                      function (err, records) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                          try {</span>
+<span class="cstat-no" title="statement not covered" >                              if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                                  sails.log.error('SalesForce._data.getMembers() Login exception - ' + err);</span>
+<span class="cstat-no" title="statement not covered" >                                  reject(err);</span>
+&nbsp;
+                              } else <span class="cstat-no" title="statement not covered" >if (records &amp;&amp; records.length &gt; 0) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                  var members = _.map(records, <span class="fstat-no" title="function not covered" >function (u) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                      return _parser.parseUser(u);</span>
+                                  });
+&nbsp;
+                              
+                                  // build user object
+<span class="cstat-no" title="statement not covered" >                                  resolve({ success: true, members: members });</span>
+&nbsp;
+                              } else {
+<span class="cstat-no" title="statement not covered" >                                  resolve( { success: false, members: null });</span>
+                              }// if-else
+                          } catch (e) {
+<span class="cstat-no" title="statement not covered" >                              reject(e);</span>
+                          }// try-catch
+&nbsp;
+                      });
+&nbsp;
+&nbsp;
+            }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+                // propagate
+<span class="cstat-no" title="statement not covered" >                reject(e);</span>
+            });
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+&nbsp;
+    },
+&nbsp;
+    // log a user action to salesforce
+    logAction: <span class="fstat-no" title="function not covered" >function (action, username, resource) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _auth.authenticateApp().then(<span class="fstat-no" title="function not covered" >function (conn) {</span></span>
+&nbsp;
+                // add new record to activity log
+<span class="cstat-no" title="statement not covered" >                conn.sobject("ActivityLog__c")</span>
+                    .create({
+                        Action__c: action,
+                        User__c: username,
+                        Resource__c: resource,
+                        Log_Date__c: new Date()
+                    }, <span class="fstat-no" title="function not covered" >function (err, ret) {</span>
+&nbsp;
+                        // return success or error
+<span class="cstat-no" title="statement not covered" >                        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.error('SalesForce._data.logAction() Errored - ' + err);</span>
+<span class="cstat-no" title="statement not covered" >                            reject(err);</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            resolve({ success: ret.success });</span>
+                        }// if-else
+&nbsp;
+                    });
+            }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+                // propagate
+<span class="cstat-no" title="statement not covered" >                reject(e);</span>
+            });
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+    },
+&nbsp;
+    // gets all companies with valid membership levels
+    getCompanies: <span class="fstat-no" title="function not covered" >function () {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _auth.authenticateApp().then(<span class="fstat-no" title="function not covered" >function (conn) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                conn.sobject("Account")</span>
+                  .find(
+                    // where
+                    {
+                        Membership_Level__c: { $in: _data.membershipLevels }
+                    },
+                    // select
+                    {
+                        id: 1,
+                        name: 1,
+                        Membership_Level__c: 1,
+                        Current_RAC_Memberships__c: 1
+                    }
+                  ).execute({ autoFetch: true, maxFetch: _batchSize },
+<span class="fstat-no" title="function not covered" >                      function (err, records) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                          if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                              sails.log.error('SailesForce._data.getCompanies() Exception - ' + err);</span>
+<span class="cstat-no" title="statement not covered" >                              reject(err);</span>
+                          } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                              sails.log.info('SailsForce._data.getCompanies() Received ' + records.length + ' records');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                              var companies = [];</span>
+<span class="cstat-no" title="statement not covered" >                              if (records &amp;&amp; records.length &gt; 0) {</span>
+                                  // parse companies
+<span class="cstat-no" title="statement not covered" >                                  companies = _.map(records, <span class="fstat-no" title="function not covered" >function (c) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                      return _parser.parseCompany(c);</span>
+                                  });
+                              } // if
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                              resolve({ success: true, companies: companies });</span>
+&nbsp;
+                          }// if-else
+&nbsp;
+                      });
+&nbsp;
+            }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+                // propagate
+<span class="cstat-no" title="statement not covered" >                reject(e);</span>
+            });
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+&nbsp;
+    },
+&nbsp;
+    getCommittees: <span class="fstat-no" title="function not covered" >function () {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var promise = q.Promise(<span class="fstat-no" title="function not covered" >function (resolve, reject, inform) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            _auth.authenticateApp().then(<span class="fstat-no" title="function not covered" >function (conn) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                conn.sobject("Committee__c")</span>
+                  .find(
+                    // where
+                    {},
+                    // select
+                    {
+                        id: 1,
+                        name: 1
+                    }
+                  ).execute({ autoFetch: true, maxFetch: _batchSize },
+<span class="fstat-no" title="function not covered" >                    function (err, records) {</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                            sails.log.error('SailesForce._data.getCommittees() Exception - ' + err);</span>
+<span class="cstat-no" title="statement not covered" >                            reject(err);</span>
+                        } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            sails.log.info('SailsForce._data.getCommittees() Received ' + records.length + ' records');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            var comm = [];</span>
+<span class="cstat-no" title="statement not covered" >                            if (records &amp;&amp; records.length &gt; 0) {</span>
+                                // parse companies
+<span class="cstat-no" title="statement not covered" >                                comm = _.map(records, <span class="fstat-no" title="function not covered" >function (c) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    return _parser.parseCommittee(c);</span>
+                                });
+                            } // if
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            resolve({ success: true, committees: comm });</span>
+&nbsp;
+                        }// if-else
+&nbsp;
+                    });
+&nbsp;
+            }, <span class="fstat-no" title="function not covered" >function (e) {</span>
+&nbsp;
+                // propagate
+<span class="cstat-no" title="statement not covered" >                reject(e);</span>
+            });
+&nbsp;
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return promise;</span>
+    }
+};
+&nbsp;
+module.exports = {
+&nbsp;
+    authenticateUser: _auth.authenticateUser,
+    getUsers: _data.getMembers,
+    logAction: _data.logAction,
+    getCompanies: _data.getCompanies,
+    getCommittees: _data.getCommittees
+&nbsp;
+};</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 09:25:55 GMT-0400 (Eastern Daylight Time)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

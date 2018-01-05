@@ -1,0 +1,70 @@
+﻿body {
+    background-color: #002757;
+    font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.logoContainer {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    padding: 50px 0px 25px 0px;
+}
+form {
+    width: 350px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, .6);
+    padding: 25px;
+    border-radius: 3px;
+}
+.formHeader {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 30px;
+    color: #fff;
+}
+label {
+    font-weight: 300;
+    font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+#loginButton {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;
+}
+#loginButton:hover {
+    background-color: #fff;
+    color: #002757;
+}
+#error { 
+    width: 350px;
+    text-align: center;
+    margin: 25px auto auto auto;
+    padding: 10px;
+    color: red;
+    border: 1px solid red;
+    display: none;
+}
+.footer {
+    position: absolute;
+    bottom: 25px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+.loginLinks {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+    .login-anchor,
+    .login-anchor:hover,
+    .login-anchor:visited,
+    .login-anchor:link {
+        color: #fff;
+    }
+.side-spacing {
+    margin-left: 5px;
+    margin-right: 5px;
+}
